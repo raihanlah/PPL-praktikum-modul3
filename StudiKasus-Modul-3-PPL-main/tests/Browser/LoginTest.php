@@ -14,7 +14,7 @@ class LoginTest extends DuskTestCase
     public function testLogin(): void
     {
         $this->browse(function (Browser $browser): void {
-            $browser->visit(url: '/')
+            $browser->visit('/')
                     ->assertSee('started')
                     ->clicklink('Log in')
                     ->assertPathIs(path: '/login')

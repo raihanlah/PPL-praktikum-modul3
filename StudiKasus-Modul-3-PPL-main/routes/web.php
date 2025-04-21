@@ -17,9 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Route::get('/notes', function () {
-    //     return view('Notes.index');
-    // })->name('notes');
+    Route::get('/notes', function () {
+        return view('Notes.index');
+    })->name('notes');
 
     Route::get('/notes', [NoteController::class, 'index'])->name('notes');
     Route::get('/create-note', [NoteController::class, 'create']);
