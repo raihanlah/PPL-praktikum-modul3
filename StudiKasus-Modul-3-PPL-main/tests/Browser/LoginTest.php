@@ -18,8 +18,8 @@ class LoginTest extends DuskTestCase
                     ->assertSee('started')
                     ->clicklink('Log in')
                     ->assertPathIs(path: '/login')
-                    ->type(field: 'email', value: '')
-                    ->type(field: 'password', value: 'password')
+                    ->type(field: 'email', value: 'raihannoor23@gmail.com')
+                    ->type(field: 'password', value: 'test')
                     ->press(button: 'LOG IN')
                     ->assertPathIs(path: '/dashboard');
         });
